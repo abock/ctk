@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B74282EE-6401-4B28-8CF2-285C419966D1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ctk</RootNamespace>
+    <AssemblyName>Ctk</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG,NET_2_0</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Ctk\MainLoop.cs" />
+    <Compile Include="Ctk\MainLoopEvent.cs" />
+    <Compile Include="Ctk\InvokeEvent.cs" />
+    <Compile Include="Ctk\TimeoutEvent.cs" />
+    <Compile Include="Ctk\Application.cs" />
+    <Compile Include="Ctk\ConsoleKeyEvent.cs" />
+    <Compile Include="Ctk\Entry.cs" />
+    <Compile Include="Ctk\Widget.cs" />
+    <Compile Include="Ctk\Globals.cs" />
+    <Compile Include="Ctk\List.cs" />
+    <Compile Include="Ctk\ConsoleExtensions.cs" />
+    <Compile Include="Ctk\ConsoleCrayon.cs" />
+    <Compile Include="Ctk\RangeCollection.cs" />
+    <Compile Include="Ctk\Selection.cs" />
+    <Compile Include="Ctk\Container.cs" />
+    <Compile Include="Ctk\Box.cs" />
+    <Compile Include="Ctk\Screen.cs" />
+    <Compile Include="Ctk.Demo\BeerModel.cs" />
+    <Compile Include="Ctk.Demo\ListDemo.cs" />
+    <Compile Include="Ctk.Demo\DemoDriver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Ctk\" />
+    <Folder Include="Ctk.Demo\" />
+  </ItemGroup>
+</Project>
